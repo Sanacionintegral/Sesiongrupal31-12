@@ -1,1 +1,231 @@
-body{background:#fbf7f8;}
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600;700;800&display=swap');
+
+/* ===== VARIABLES ===== */
+:root{
+  --bg: #fbf7f8;
+  --card: #ffffff;
+  --text: #3b2f33;
+  --muted: #6b5a60;
+
+  --pink: #d9a7b4;      /* rosa viejo */
+  --pink-soft: #f2d6dc;/* rosa bebé */
+  --gold: #d4a643;      /* dorado */
+  --violet: #a88bff;
+}
+
+/* ===== RESET ===== */
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin:0;
+  font-family: 'Montserrat', sans-serif;
+  background: radial-gradient(circle at top, #ffffff 0%, var(--bg) 60%);
+  color: var(--text);
+}
+
+/* ===== LAYOUT ===== */
+.container{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.center{
+  text-align: center;
+}
+
+.card{
+  background: rgba(255,255,255,0.95);
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 18px 40px rgba(120,70,85,0.15);
+  border: 1px solid rgba(217,167,180,0.4);
+}
+
+/* ===== TEXTOS ===== */
+.title{
+  font-size: clamp(28px, 4vw, 46px);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.subtitle{
+  font-size: 17px;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+p{
+  line-height: 1.6;
+}
+
+.small{
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ===== BADGES ===== */
+.badge{
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  background: var(--pink-soft);
+  border: 1px solid rgba(217,167,180,0.6);
+}
+
+.badge.alert{
+  background: #ffe9a8;
+  border-color: var(--gold);
+}
+
+/* ===== HERO / BANDA ===== */
+.hero{
+  position: relative;
+}
+
+.ribbon{
+  height: 82px;
+  background: linear-gradient(90deg, var(--pink), var(--pink-soft), var(--pink));
+  border-radius: 20px;
+  margin: 22px 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seal{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fffaf0 40%, #fff 100%);
+  border: 2px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 14px 28px rgba(212,166,67,0.3);
+  transform: translateY(-18px);
+}
+
+.seal span{
+  font-family: 'Great Vibes', cursive;
+  font-size: 44px;
+  color: var(--gold);
+}
+
+/* ===== CHIPS ===== */
+.kicker{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 18px 0;
+}
+
+.chip{
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--pink-soft);
+  border: 1px solid rgba(217,167,180,0.6);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ===== BOTONES ===== */
+.btnRow{
+  display: grid;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+@media(min-width:720px){
+  .btnRow{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.btn{
+  padding: 16px;
+  border-radius: 18px;
+  text-decoration: none;
+  font-weight: 800;
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+.btn.primary{
+  background: linear-gradient(180deg, #b999ff, var(--violet));
+  color: #fff;
+}
+
+.btn.secondary{
+  background: var(--pink-soft);
+  color: var(--text);
+}
+
+.btn.gold{
+  background: linear-gradient(180deg, #e0b253, var(--gold));
+  color: #fff;
+}
+
+.btn:hover{
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+/* ===== LISTAS ===== */
+.list{
+  margin-top: 14px;
+}
+
+.list li{
+  margin: 10px 0;
+}
+
+/* ===== CALLOUT ===== */
+.callout{
+  background: rgba(242,214,220,0.5);
+  border: 1px dashed rgba(217,167,180,0.7);
+  padding: 16px;
+  border-radius: 18px;
+  margin: 18px 0;
+}
+
+/* ===== PRECIO ===== */
+.priceBox{
+  margin: 24px auto;
+  max-width: 420px;
+  background: linear-gradient(180deg, #e0b253, var(--gold));
+  border-radius: 20px;
+  padding: 18px;
+  color: #fff;
+}
+
+.priceBox .label{
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.priceBox .price{
+  font-size: 46px;
+  font-weight: 900;
+}
+
+/* ===== DIVISOR ===== */
+.hr{
+  height: 1px;
+  background: rgba(217,167,180,0.5);
+  margin: 22px 0;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+  margin-top: 24px;
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+}
