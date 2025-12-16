@@ -7,8 +7,8 @@
   --text: #3b2f33;
   --muted: #6b5a60;
 
-  --pink: #d9a7b4;      /* rosa viejo */
-  --pink-soft: #f2d6dc;/* rosa bebé */
+  --pink: #d9a7b4;       /* rosa viejo */
+  --pink-soft: #f2d6dc; /* rosa bebé */
   --gold: #d4a643;      /* dorado */
   --violet: #a88bff;
 }
@@ -54,7 +54,7 @@ body{
 .subtitle{
   font-size: 17px;
   color: var(--muted);
-  margin-bottom: 18px;
+  margin-bottom: 22px; /* más aire arriba de la banda */
 }
 
 p{
@@ -87,16 +87,23 @@ p{
   position: relative;
 }
 
+/* Banda rosa */
 .ribbon{
   height: 82px;
-  background: linear-gradient(90deg, var(--pink), var(--pink-soft), var(--pink));
+  background: linear-gradient(
+    90deg,
+    var(--pink),
+    var(--pink-soft),
+    var(--pink)
+  );
   border-radius: 20px;
-  margin: 22px 0 16px;
+  margin: 32px 0 18px; /* baja toda la banda */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* Círculo Clara */
 .seal{
   width: 120px;
   height: 120px;
@@ -107,7 +114,7 @@ p{
   align-items: center;
   justify-content: center;
   box-shadow: 0 14px 28px rgba(212,166,67,0.3);
-  transform: translateY(-18px);
+  transform: translateY(-6px); /* ⬅️ BAJADO (antes -18px) */
 }
 
 .seal span{
